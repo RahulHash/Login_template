@@ -22,13 +22,93 @@ h1:hover {
   transform: scale3d(1.1, 1.1, 1.1);
 }
 
-.main-container {
+.main-container,
+.main-container-blue,
+.main-container-violet,
+.main-container-grape,
+.main-container-pink {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
   background: #96dcee;
+  transition: 0.5s;
+}
+
+.main-container-violet {
+  background: var(--violet-4);
+  transition: 0.5s;
+}
+
+.main-container-grape {
+  background: var(--grape-4);
+  transition: 0.5s;
+}
+
+.main-container-pink {
+  background: var(--pink-4);
+  transition: 0.5s;
+}
+
+.btn-container,
+.btn-container-violet,
+.btn-container-blue,
+.btn-container-grape,
+.btn-container-pink {
+  position: absolute;
+  display: flex;
+  gap: 0.5em;
+  border: 3px solid #96dcee;
+  border-radius: 100px;
+  top: 5%;
+  width: 90%;
+  justify-content: flex-end;
+  transition: 0.5s;
+  padding: 5px;
+}
+
+.btn-container-violet {
+  border: 3px solid var(--violet-4);
+  transition: 0.5s;
+}
+
+.btn-container-pink {
+  border: 3px solid var(--pink-4);
+  transition: 0.5s;
+}
+
+.btn-container-grape {
+  border: 3px solid var(--grape-4);
+  transition: 0.5s;
+}
+
+.btn {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn1 {
+  background: var(--violet-4);
+  border: 1px solid var(--violet-7);
+}
+
+.btn2 {
+  background: var(--grape-4);
+  border: 1px solid var(--grape-7);
+}
+
+.btn3 {
+  background: var(--pink-4);
+  border: 1px solid var(--pink-7);
+}
+
+.btn4 {
+  background: #96dcee;
+  border: 1px solid var(--blue-5);
 }
 
 .cred-img-container {
@@ -53,10 +133,29 @@ h1:hover {
   user-select: none;
 }
 
-.side-image > img {
+.images{
+  content: url("left-img.svg");
   width: 100%;
   height: 90%;
+  transition:all 0.5s ease-in-out;
 }
+
+.img-blue{
+  content: url("left-img.svg");
+}
+
+.img-pink{
+  content: url("left-img-pink.svg");
+}
+
+.img-grape{
+  content: url("left-img-grape.svg");
+}
+
+.img-violet{
+  content: url("left-img-violet.svg");
+}
+
 
 .creds {
   display: flex;
@@ -76,6 +175,7 @@ h1:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .login-form:hover {
@@ -127,7 +227,11 @@ h1:hover {
   text-decoration: underline;
 }
 
-.login-button {
+.login-button,
+.login-button-pink,
+.login-button-grape,
+.login-button-blue,
+.login-button-violet {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -136,9 +240,25 @@ h1:hover {
   padding: 0.5em 2em;
   margin-top: 0.7em;
   margin-bottom: 0.5em;
-  background: #96DCEE;
+  background: #96dcee;
   color: #fff;
   transition: transform 0.2s;
+  transition: 0.5s;
+}
+
+.login-button-pink {
+  background: var(--pink-4);
+  transition: 0.5s;
+}
+
+.login-button-violet {
+  background: var(--violet-4);
+  transition: 0.5s;
+}
+
+.login-button-grape {
+  background: var(--grape-4);
+  transition: 0.5s;
 }
 
 .login-button:hover {
@@ -218,12 +338,13 @@ footer > a:hover {
     width: 90%;
   }
 
-  h1{
+  h1 {
+    margin-top:1em;
     font-size: 3em;
   }
 
   .login-form > p {
-    font-size:.8em;
+    font-size: 0.8em;
   }
 
   .extra {
@@ -232,5 +353,14 @@ footer > a:hover {
 
   .creds {
     width: 70%;
+  }
+
+  .btn-container,
+  .btn-container-violet,
+  .btn-container-blue,
+  .btn-container-grape,
+  .btn-container-pink {
+    top:0;
+    padding: 1px;
   }
 }

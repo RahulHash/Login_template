@@ -16,12 +16,18 @@
     <title>Login</title>
   </head>
   <body>
-    <form class="main-container">
+    <form class="main-container" id="main-container">
       
       <!-- <div class="main-container"> -->
       <div class="cred-img-container">
         <!-- login-form -->
         <div class="login-form">
+          <div class="btn-container" id="btn-container">
+            <div class="btn btn1" id="btn1"></div>
+            <div class="btn btn2" id="btn2"></div>
+            <div class="btn btn3" id="btn3"></div>
+            <div class="btn btn4" id="btn4"></div>
+          </div>
           <h1>LOGIN BOYS</h1>
           <p>Welcome back, boys and grils.</p>
           <div class="creds">
@@ -47,7 +53,7 @@
             </div>
             <a href="#" class="forgot-password">Forgot Password</a>
           </div>
-          <div class="login-button">
+          <div class="login-button" id="login-button">
             <i class="fa-solid fa-right-to-bracket"></i>
             <input type="Submit" value="Sign in" />
           </div>
@@ -65,10 +71,11 @@
         </div>
         <!-- side-image -->
         <div class="side-image">
-          <img src="left-img.svg" alt="" class="" />
+          <img id="images" alt="" class="images img" />
         </div>
       </div>
       <!-- </div>-->
     </form>
+    <script src="script.js"></script>
   </body>
 </html>
